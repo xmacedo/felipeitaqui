@@ -174,7 +174,6 @@ section {
 }
 
 #titulos li::before {
-  /* content: "🥇"; */
   position: absolute;
   left: 0;
   color: #bda313;
@@ -228,8 +227,6 @@ section {
   transform: scale(1.05);
 }
 
-
-
 footer a:hover {
   text-decoration: underline;
 }
@@ -244,4 +241,44 @@ footer {
 footer a {
   color: #ffffff;
   text-decoration: none;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  min-width: 100%;
+  border-radius: 10px;
+}
+
+/* Botões */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #FFD700;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+.carousel button:hover {
+  background: rgba(0,0,0,0.8);
 }

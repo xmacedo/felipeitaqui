@@ -1,72 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo Esportivo - Jiu-Jitsu</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Esportivo - Jiu-Jitsu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navbar -->
-  <nav class="navbar">
-    <h1>Felipe Itaqui</h1>
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#titulos">Títulos</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-content">
-      <h2>Atleta de Jiu-Jitsu</h2>
-      <p>Superação, disciplina e conquistas nos tatames</p>
-      <a href="#titulos" class="btn">Ver Títulos</a>
-    </div>
-  </header>
+    <nav class="navbar">
+        <h1>Felipe Itaqui</h1>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#titulos">Títulos</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Atleta de Jiu-Jitsu</h2>
+            <p>Superação, disciplina e conquistas nos tatames</p>
+            <a href="#titulos" class="btn">Ver Títulos</a>
+        </div>
+    </header>
 
 
-<!-- Sobre -->
-  <section id="sobre">
-      <img src="images/perfil.jpg" alt="Foto do atleta" class="foto-perfil">
-      <div class="bio">
-        <h2>Sobre mim</h2>
-        <p>
-          Iniciei no Jiu-Jitsu em 2010 e venho competindo em torneios nacionais e internacionais.<br><br>
-          Faixa preta 2 grau, equipe 
-          <a href="https://www.instagram.com/scorpyonjiujitsu/" target="_blank">Scorpyon</a> /
-          <a href="https://www.instagram.com/dftjiujitsu/" target="_blank">DFT - Jiu-Jitsu</a>.
-        </p>
-      </div>
+    <!-- Sobre -->
+    <section id="sobre">
+        <img src="images/perfil.jpg" alt="Foto do atleta" class="foto-perfil">
+        <div class="bio">
+            <h2>Sobre mim</h2>
+            <p>
+                Iniciei no Jiu-Jitsu em 2010 e venho competindo em torneios nacionais e internacionais.<br><br>
+                Faixa preta 2 grau, equipe
+                <a href="https://www.instagram.com/scorpyonjiujitsu/" target="_blank">Scorpyon</a> /
+                <a href="https://www.instagram.com/dftjiujitsu/" target="_blank">DFT - Jiu-Jitsu</a>.
+            </p>
+        </div>
     </section>
     <!-- Títulos -->
     <section id="titulos">
-      <h2>Principais Títulos</h2>
-      <ul>
-        <li>🏆 Top Ranking 2016 Prime/ProSports - FGJJ- RS</li>
-        <li>🏆🏆🏆 Top Ranking 2022, 2023 e 2024 FJJ - RS</li>
-        <li>🥇 Campeão Brasileiro CBJJ/IBJJF 2016</li>
-        <li>🥇 Campeão Nationals Brazil UAEJJF/AJP</li>
-        <li>🥇 Campeão Floripa Fall 2025 CBJJ/IBJJF</li>
-      </ul>
+        <h2>Principais Títulos</h2>
+        <ul>
+            <li>🏆 Top Ranking 2016 Prime/ProSports - FGJJ- RS</li>
+            <li>🏆🏆🏆 Top Ranking 2022, 2023 e 2024 FJJ - RS</li>
+            <li>🥇 Campeão Brasileiro CBJJ/IBJJF 2016</li>
+            <li>🥇 Campeão Nationals Brazil UAEJJF/AJP</li>
+            <li>🥇 Campeão Floripa Fall 2025 CBJJ/IBJJF</li>
+        </ul>
     </section>
     <!-- Galeria -->
     <section id="galeria">
-      <h2>Galeria</h2>
-      <div class="grid">
-        <img src="images/titulo1.jpg" alt="Pódio">
-        <img src="images/titulo2.jpg" alt="Luta no campeonato">
-      </div>
+        <h2>Galeria</h2>
+        <div class="carousel">
+            <button class="prev">❮</button>
+            <div class="carousel-track">
+                <img src="images/titulo1.jpg" alt="Pódio">
+                <img src="images/titulo2.jpg" alt="Luta no campeonato">
+            </div>
+            <button class="next">❯</button>
+        </div>
     </section>
 
+    <!-- Contato -->
+    <footer>
+        <h2>Contato</h2>
+        <p>Siga no Instagram: <a href="https://instagram.com/felipeitaqui" target="_blank">@felipeitaqui</a></p>
+        <p>Email: <a href="mailto:felipe.x.macedo@gmail.com">felipe.x.macedo@gmail.com</a></p>
+    </footer>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+        let currentIndex = 0;
 
-  <!-- Contato -->
-  <footer>
-    <h2>Contato</h2>
-    <p>Siga no Instagram: <a href="https://instagram.com/felipeitaqui" target="_blank">@felipeitaqui</a></p>
-    <p>Email: <a href="mailto:felipe.x.macedo@gmail.com">felipe.x.macedo@gmail.com</a></p>
-  </footer>
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        // autoplay (troca a cada 4s)
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }, 4000);
+    </script>
 </body>
 </html>
