@@ -60,11 +60,12 @@
 
         <div class="gallery">
             <img src="images/titulo4.jpg" alt="Brasileiro">
-            <img src="images/titulo5.jpg" alt="Panamericano">
+            <img src="images/titulo6.jpg" alt="Panamericano">
             <img src="images/titulo1.jpg" alt="Floripa Fall">
             <img src="images/titulo2.jpg" alt="Prime/ProSports">
         </div>
     </section>
+
     <!-- Galeria -->
     <section id="galeria">
         <h2>Galeria</h2>
@@ -98,34 +99,34 @@
 
     <!-- Patrocínio -->
     <section id="patrocinio" class="patrocinio">
-  <div class="container">
-    <h2>Seja parceiro de um campeão!</h2>
+        <div>
+            <h2>Seja parceiro de um campeão!</h2>
+            <p class="lead">
+                Ao patrocinar <strong>Felipe Itaqui</strong>, sua marca se associa a valores como disciplina e
+                superação.
+            </p>
 
-    <p class="lead">
-      Ao patrocinar <strong>Felipe Itaqui</strong>, sua marca se associa a valores como disciplina e superação.
-    </p>
+            <div class="patrocinio-grid">
+                <div class="patrocinio-card">
+                    <h3>Benefícios para patrocinadores</h3>
+                    <ul>
+                        <li>Visibilidade em competições e redes sociais</li>
+                        <li>Divulgação em uniformes, vídeos e eventos</li>
+                        <li>Associação com um atleta vitorioso e com público segmentado</li>
+                    </ul>
+                </div>
 
-    <div class="patrocinio-grid">
-      <div class="patrocinio-card">
-        <h3>Benefícios para patrocinadores</h3>
-        <ul>
-          <li>Visibilidade em competições e redes sociais</li>
-          <li>Divulgação em uniformes, vídeos e eventos</li>
-          <li>Associação com um atleta vitorioso e com público segmentado</li>
-        </ul>
-      </div>
-
-      <div class="patrocinio-card">
-        <h3>Formas de apoio</h3>
-        <ul>
-          <li>Apoio financeiro para viagens e inscrições</li>
-          <li>Equipamentos esportivos e suplementação</li>
-          <li>Parcerias para conteúdo e divulgação</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="patrocinio-card">
+                    <h3>Formas de apoio</h3>
+                    <ul>
+                        <li>Apoio financeiro para viagens e inscrições</li>
+                        <li>Equipamentos esportivos e suplementação</li>
+                        <li>Parcerias para conteúdo e divulgação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Marcas -->
@@ -134,8 +135,10 @@
         <div class="marcas-grid" align="center">
             <a href="https://www.instagram.com/wkt.oficial/" target="_blank"><img src="images/marca1.png" alt="WKT Centro de Treinamento Físico
 "></a>
-            <a href="https://www.instagram.com/bravooneoficial/" target="_blank"><img src="images/marca2.png" alt="Bravo One"></a>
-            <a href="https://www.instagram.com/gabriel_tocchetto_makarewicz/" target="_blank"><img src="images/marca3.png" alt="Gabriel Tocchetto"></a>
+            <a href="https://www.instagram.com/bravooneoficial/" target="_blank"><img src="images/marca2.png"
+                    alt="Bravo One"></a>
+            <a href="https://www.instagram.com/gabriel_tocchetto_makarewicz/" target="_blank"><img
+                    src="images/marca3.png" alt="Gabriel Tocchetto"></a>
         </div>
     </section>
 
@@ -171,6 +174,23 @@
             currentIndex = (currentIndex + 1) % slides.length;
             updateCarousel();
         }, 4000);
+
+        function openTab(evt, year) {
+            // Esconde todos os conteúdos
+            const tabcontent = document.querySelectorAll(".tabcontent");
+            tabcontent.forEach(el => el.style.display = "none");
+
+            // Remove "active" de todos os botões
+            const tablinks = document.querySelectorAll(".tablink");
+            tablinks.forEach(el => el.classList.remove("active"));
+
+            // Mostra o conteúdo selecionado
+            document.getElementById(year).style.display = "block";
+
+            // Marca o botão clicado como ativo
+            evt.currentTarget.classList.add("active");
+        }
+
     </script>
 </body>
 
