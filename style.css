@@ -249,6 +249,60 @@ section {
   transform: scale(1.05);
 }
 
+/* Patrocínio */
+.patrocinio {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #0f0f0f 0%, #141414 100%);
+  color: #f5f5f5;
+}
+.patrocinio .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+.patrocinio h2 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+.patrocinio .lead {
+  color: #d7d7d7;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* Grid */
+.patrocinio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+.patrocinio-card {
+  background: #111;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+.patrocinio-card h3 {
+  color: #ffd700;
+  margin-bottom: .75rem;
+}
+.patrocinio-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: grid;
+  gap: .5rem;
+}
+.patrocinio-card li::before {
+  content: "•";
+  color: #ffd700;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
 footer a:hover {
   text-decoration: underline;
 }
@@ -298,6 +352,10 @@ footer a {
 
 .carousel img {
   min-width: 100%;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;   /* altura fixa para todas as imagens */
+  object-fit: cover; /* corta proporcionalmente sem distorcer */
   border-radius: 10px;
 }
 
