@@ -155,7 +155,7 @@ section {
   box-shadow: 0 2px 8px #0003;
 }
 
-#titulos h2, #galeria h2, footer h2 {
+#titulos h2, #galeria h2, #arbitro h2, #patrocinio h2, #marcas h2, footer h2 {
   color: #1063b5;
   margin-bottom: 1rem;
 }
@@ -227,8 +227,47 @@ section {
   transform: scale(1.05);
 }
 
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Marcas */
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+.marcas-grid img {
+  max-width: 120px;
+  margin: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.marcas-grid img:hover {
+  filter: none;
 }
 
 /* Footer */
