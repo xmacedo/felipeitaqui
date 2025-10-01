@@ -12,6 +12,29 @@ body {
   line-height: 1.6;
 }
 
+/* Navbar em telas pequenas */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* empilha o logo e o menu */
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap; /* quebra os itens em mais de uma linha */
+    gap: 0.8rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
